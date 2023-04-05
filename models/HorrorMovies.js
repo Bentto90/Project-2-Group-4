@@ -15,7 +15,15 @@ HorrorMovies.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        genre: {
+        year: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        director: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        subgenre: {
             type: DataTypes.STRING,
             allowNull: false,
         },
