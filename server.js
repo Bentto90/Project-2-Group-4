@@ -13,11 +13,17 @@ const PORT = process.env.PORT || 3001;
 const hbs = exhbs.create({ helpers });
 
 // Set up sessions with cookies
+// defining a session object using the session() method
 const sess = {
+    // secret is a string that is used to sign the session ID cookie
     secret: 'Super secret secret',
+    // cookie is an object that contains the cookie settings
     cookie: {},
+    // resave: false means that the session will not be resaved if nothing has changed
     resave: false,
+    // A boolean that determines whether or not to save an unmodified session to the store
     saveUninitialized: true,
+    // a custom session store implemenation that uses Sequelize ORM to persist session data to a database.
     store: new SquelizeStore({
         db: sequelize
     })
