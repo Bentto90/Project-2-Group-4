@@ -3,19 +3,17 @@
   "version": "1.0.0",
   "description": "Project 2",
   "main": "server.js",
-
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "seed": "node seeds/seed.js"
   },
-
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "dependencies": {
     "bcrypt": "^5.1.0",
+    "compression": "^1.7.4",
     "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
@@ -24,11 +22,9 @@
     "mysql2": "^3.2.0",
     "sequelize": "^6.30.0"
   },
-
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^8.3.0",
     "prettier": "^2.1.2"
-
   }
 }
