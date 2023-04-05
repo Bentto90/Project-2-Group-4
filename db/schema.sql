@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS horrormoivies_db;
-CREATE DATABASE horrormoivies_db;
+DROP DATABASE IF EXISTS horrormovies_db;
+CREATE DATABASE horrormovies_db;
 
