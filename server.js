@@ -4,6 +4,9 @@ const session = require('express-session');
 const exhbs = require('express-handlebars');
 const routes = require('./controllers');
 const compression = require('compression');
+const fetch = require('node-fetch');
+const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690'
+
 
 const sequelize = require('./config/connection');
 const SquelizeStore = require('connect-session-sequelize')(session.Store);
@@ -40,7 +43,15 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 
+app.use()
 app.use(routes);
+
+app.get('/movies', async (req, res) => {
+    const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
+    const response = await fetch(url);
+    const data = await response.json();
+    res.render('movies', { movies: data.results });
+  });
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('http://localhost:' + PORT));
