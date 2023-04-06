@@ -46,12 +46,23 @@ app.use(compression());
 app.use()
 app.use(routes);
 
-app.get('/movies', async (req, res) => {
-    const url = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
+app.get('/horror-movies', async (req, res) => {
+    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27`;
     const response = await fetch(url);
     const data = await response.json();
-    res.render('movies', { movies: data.results });
+    const movies = data.results.map((movie) => {
+      return {
+        title: movie.title,
+        release_date: movie.release_date,
+        director: null, // you may need to obtain the director info from another API or database
+        detail: movie.overview,
+        image: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
+        watch_provider: null // you may need to obtain the watch provider info from another API or database
+      }
+    });
+    res.render('horror-movies', { movies });
   });
+  
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('http://localhost:' + PORT));
