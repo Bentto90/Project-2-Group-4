@@ -57,7 +57,7 @@ app.get('/horror-movies', async (req, res) => {
         director: null, // you may need to obtain the director info from another API or database
         detail: movie.overview,
         image: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
-        watch_provider: null // you may need to obtain the watch provider info from another API or database
+        watch_provider: `https://api.themoviedb.org/3/watch/providers/regions?api_key=${API_KEY}&language=en-US`
       }
     });
     res.render('horror-movies', { movies });
