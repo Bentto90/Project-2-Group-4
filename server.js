@@ -55,17 +55,11 @@ app.get('/horror-movies', async (req, res) => {
       return {
         title: movie.title,
         release_date: movie.release_date,
-        director: null, 
         detail: movie.overview,
         image: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
-        watch_provider: null 
         };
     });
-    const watch_provider = data.result.map((us) => {
-      return {
-        link: us.link
-      }
-    })
+    
     res.render('horror-movies', { movies });
   });
   
