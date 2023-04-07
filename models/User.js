@@ -37,6 +37,10 @@ User.init(
                 len: [8],   // password must be at least 8 characters long
             },
         },
+        subscribtion: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+        }
     },
     {
         hooks: {
