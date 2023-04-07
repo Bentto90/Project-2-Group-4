@@ -42,7 +42,7 @@ HorrorMovies.init(
                 key: 'id',
             },
         },
-        },
+    },
         {
             sequelize,
             timestamps: false,
@@ -50,6 +50,7 @@ HorrorMovies.init(
             underscored: true,
             modelName: 'horrorMovies',
         }
-    );
+    
+);
 
 module.exports = HorrorMovies;
