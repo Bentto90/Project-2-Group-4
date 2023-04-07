@@ -57,6 +57,8 @@ app.get('/horror-movies', async (req, res) => {
         release_date: movie.release_date,
         detail: movie.overview,
         image: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
+        watch_provider: `https://api.themoviedb.org/3/watch/providers/regions?api_key=${API_KEY}&language=en-US`
+      }
         };
     });
     

@@ -49,7 +49,6 @@ HorrorMovies.init(
             freezeTableName: true,
             underscored: true,
             modelName: 'horrorMovies',
-        }
-    );
+        });
 
 module.exports = HorrorMovies;
