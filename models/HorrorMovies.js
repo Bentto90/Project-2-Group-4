@@ -50,7 +50,6 @@ HorrorMovies.init(
             underscored: true,
             modelName: 'horrorMovies',
         }
-    
-);
+        );
 
 module.exports = HorrorMovies;
