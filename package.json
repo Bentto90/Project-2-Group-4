@@ -20,7 +20,9 @@
     "express-handlebars": "^7.0.4",
     "express-session": "^1.17.3",
     "mysql2": "^3.2.0",
-    "sequelize": "^6.30.0"
+    "node-fetch": "^3.3.1",
+    "sequelize": "^6.30.0",
+    "tmdbv3": "^0.1.2"
   },
   "devDependencies": {
     "eslint": "^7.12.1",
