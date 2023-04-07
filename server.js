@@ -45,20 +45,22 @@ app.use(compression());
 
 app.use(routes);
 
+// GET /horror movies 
 app.get('/horror-movies', async (req, res) => {
-    const url = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27`;
+    const url = `https://api.themoviedb.org/3/movie/550?api_key=${API_KEY}&with_genre=27`
     const response = await fetch(url);
     const data = await response.json();
     const movies = data.results.map((movie) => {
       return {
         title: movie.title,
         release_date: movie.release_date,
-        director: null, // you may need to obtain the director info from another API or database
         detail: movie.overview,
         image: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
-        watch_provider: null // you may need to obtain the watch provider info from another API or database
+        watch_provider: `https://api.themoviedb.org/3/watch/providers/regions?api_key=${API_KEY}&language=en-US`
       }
+        };
     });
+    
     res.render('horror-movies', { movies });
   });
   
