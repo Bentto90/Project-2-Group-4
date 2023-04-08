@@ -58,11 +58,11 @@ app.get('/horror-movies', async (req, res) => {
         image: `https://image.tmdb.org/t/p/w500/${movie.poster_path}`,
         watch_provider: `https://api.themoviedb.org/3/watch/providers/regions?api_key=${API_KEY}&language=en-US`
       }
-        });
+        
     });
     
     res.render('horror-movies', { movies });
-  
+})
   
 
 sequelize.sync({ force: false }).then(() => {
