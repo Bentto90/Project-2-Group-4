@@ -1,20 +1,20 @@
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
-const exhbs = require('express-handlebars');
+const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const compression = require('compression');
 const fetch = require('node-fetch');
-const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690'
-
+const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
+const hbs = exphbs.create({ });
 
 const sequelize = require('./config/connection');
-const SquelizeStore = require('connect-session-sequelize')(session.Store);
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-const hbs = exhbs.create({ helpers });
+// const hbs = exhbs.create({ helpers });
 
 // Set up sessions with cookies
 // defining a session object using the session() method
@@ -28,7 +28,7 @@ const sess = {
     // A boolean that determines whether or not to save an unmodified session to the store
     saveUninitialized: true,
     // a custom session store implemenation that uses Sequelize ORM to persist session data to a database.
-    store: new SquelizeStore({
+    store: new SequelizeStore({
         db: sequelize
     })
 };
@@ -43,7 +43,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 
-app.use()
 app.use(routes);
 
 // GET /horror movies 
