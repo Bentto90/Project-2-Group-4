@@ -95,12 +95,42 @@ a:hover {
     bottom: 15px;
 }
 
-img {
+.subImg {
     border-radius: 5px;
     margin-top: 10px;
 }
 
-img:hover {
+.subImg:hover {
     transform: scale(1.1);
     border: 2px solid red;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.leftText {
+    display: flex;
+    font-size: 20px;
+    padding-left: 150px; 
+    position: relative;
+    bottom: 100px;
+}
+
+.rightText {
+    display: flex;
+    position: relative;
+    font-size: 20px;
+    bottom: 30px;
+}
+
+.rightImg {
+    float: right;
+    position: relative;
+    bottom: 70px;
 }
