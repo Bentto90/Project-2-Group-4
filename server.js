@@ -33,7 +33,7 @@ const sess = {
 
 app.use(session(sess));
 
-app.engine('handlebars', hbs.engine);
+app.engine('handlebars',hbs.engine);
 app.set('view engine', 'handlebars');
 
 app.use(express.json());
@@ -46,3 +46,11 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('http://localhost:' + PORT));
 });
+
+function openNav() {
+    document.getElementById("sidePanel").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("sidePanel").style.width = "0";
+  };
