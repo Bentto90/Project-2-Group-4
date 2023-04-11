@@ -2,11 +2,10 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
-const routes = require('./controllers');
+const routes = require('./controllers/api');
 const compression = require('compression');
 const fetch = require('node-fetch');
-const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
-const hbs = exphbs.create({defaultLayout:"main" });
+const hbs = exphbs.create({ });
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);

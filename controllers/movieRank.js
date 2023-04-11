@@ -1,5 +1,5 @@
+const router = require('express').Router();
 const rank = require('../models/movieRankModel.js');
-
 
 module.exports = {
     getMovieRank (req, res) {
@@ -16,3 +16,5 @@ module.exports = {
         movieRank();
     }
 };
+
+module.exports = router;

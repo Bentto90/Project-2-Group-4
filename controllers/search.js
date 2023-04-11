@@ -1,3 +1,4 @@
+const router = require('express').Router();
 const search = require('../models/searchModels.js');
 
 module.exports = {
@@ -21,3 +22,5 @@ module.exports = {
         }
     },
 };
+
+module.exports = router;
