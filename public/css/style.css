@@ -3,7 +3,7 @@
     src: url(PlayfairDisplaySC-Regular);
 }
 
-.mainContent {
+.hero {
     background-color: black;
 }
 
@@ -147,4 +147,37 @@ img {
 .reviewForm {
     position: relative;
     top: 30px;
+}
+
+form {
+    position: relative;
+    right: 250px;
+}
+
+label {
+    position: relative;
+    top: 10px;
+}
+
+.create {
+    position: relative;
+    left: 250px;
+    bottom: 330px;
+}
+
+.title {
+    color: red;
+    position: relative;
+    right: 250px;
+    top: 50px;
+    font-weight: bold;
+}
+
+.account {
+    color: red;
+    font-weight: bold;
+    font-size: 32px;
+    position: relative;
+    left: 250px;
+    bottom: 15px;
 }
