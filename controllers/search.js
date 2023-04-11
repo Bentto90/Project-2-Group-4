@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const search = require('../models/searchModels.js');
+const Search = require('../models/searchModels.js');
 
 module.exports = {
     getSearchDetail (req, res) {

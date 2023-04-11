@@ -1,5 +1,6 @@
 const axios = require('axios');
 const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
+const router = require('express').Router();
 
 class Search {
     constructor (searchQuery) {

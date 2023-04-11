@@ -24,8 +24,15 @@
             </p>
         </nav>
 </header>
-
-<input class="input is-large is-dark" type="text" placeholder="Search all horror movies...">
+<form action = "/search" method = "GET">
+    <div class="field has-addons">
+        <div class="control">
+            <input class="input is-large is-dark" type="text" placeholder="Search all horror movies..." name="search">
+        </div>
+        <div class="control">
+            <button class="button is-large is-danger">Search</button>
+        </div>
+    </div>
         
 <div>
     <h2 class="headers has-text-centered has-text-danger is-size-2">Subgenres</h2>

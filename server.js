@@ -5,7 +5,8 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers/api');
 const compression = require('compression');
 const hbs = exphbs.create({ });
-
+const movieDetail = require('./controllers/movieDetail.js');
+const searchController = require('./controllers/search.js');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -40,7 +41,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
-
+app.use('/', movieDetail);
+app.use('/', searchController)
 app.use(routes);
   
 sequelize.sync({ force: false }).then(() => {
