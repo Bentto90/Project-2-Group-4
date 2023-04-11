@@ -1,4 +1,6 @@
+const router = require('express').Router();
 const latest = require('../models/movieIndexModel.js');
+
 
 const movies = {};
 let dateObj = new Date();
@@ -37,3 +39,5 @@ module.exports = {
         return res.render("index", movies)
     }
 };
+
+module.exports = router;

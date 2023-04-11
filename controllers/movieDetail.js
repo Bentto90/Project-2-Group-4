@@ -1,3 +1,4 @@
+const router = require('express').Router();
 const movieDetail = require('../models/movieDetailModel.js');
 
 module.export = {
@@ -17,3 +18,5 @@ module.export = {
 
     },
 };
+
+module.exports = router;
