@@ -7,7 +7,7 @@ class Search {
     }
     async getData() {
         try {
-            const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=pl-PL&query=${this.query}&page=1`);
+            const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${this.query}&page=1`);
 
             const resData = response.data.results;
 

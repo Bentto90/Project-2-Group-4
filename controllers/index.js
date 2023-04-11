@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const latest = require('../models/movieIndexModel.js');
-
+const latest = require('../models/index.js');
 
 const movies = {};
 let dateObj = new Date();
