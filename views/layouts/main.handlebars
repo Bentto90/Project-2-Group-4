@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript" src="server.js"></script>
+    <title>House of Horrors</title>
+</head>
+<body>
+     <header class="himg">
+                <div id="sidePanel" class="panel">
+                        <a class="closebtn" onclick="closeNav()">×</a>
+                        <ul>
+                        <a href="#about">About</a>
+                        <a href="#watchlist.handlebars">My Watchlist</a>
+                        <a href="#reviews.handlebars">Submit Review</a>
+                        <a href="#login.handlebars">Login</a>
+                        </ul>
+                </div>
+                    
+                    <nav class="level hnav">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+                    <p class="level-item has-text-centered">
+                        <a href="homepage.handlebars" class="link is-info navitem">Home</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a href="#homepage.handlebars" class="maintitle">House of Horrors</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a href="about.handlebars" class="link is-info navitem">About</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a href="watchlist.handlebars" class="link is-info navitem">My Watchlist</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a href="reviews.handlebars" class="link is-info navitem">Submit Review</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a class="js-modal-trigger navitem" data-target="modal-js-example">Login</a>
+                    </p>
+                </nav>
+        </header>
+        <div class="parallax"></div>
+       
+                {{{body}}}
+
+    <footer>
+        <div>Website Created by
+        <a href="https://github.com/daniferru">daniferru,</a>
+        <a href="https://github.com/Bentto90">Bentto90,</a>
+        <a href="https://github.com/AntonioRobledo">AntonioRobledo,</a>
+        <a href="https://github.com/Esfan7">Esfan,</a> and 
+        <a href="https://github.com/BigNATE38">BigNATE38.</a>
+        <p>2023</p>
+        </div>
+    </footer>
+</body>
+</html>
