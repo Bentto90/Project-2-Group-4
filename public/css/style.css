@@ -1,8 +1,17 @@
+@font-face {
+    font-family: 'Dignity';
+    src: url(PlayfairDisplaySC-Regular);
+}
+
 body {
     background-color: black;
 }
 
-header {
+h2 {
+    position: relative;
+    font-family: 'Dignity';
+    margin-top: 50px;
+    margin-right: 105px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -104,23 +113,10 @@ a:hover {
 }
 
 .input {
-    background-color: rgb(245, 50, 50);
     border-radius: 10px;
-    width: 1700px;
+    width: 1600px;
     height: 50px;
     margin-top: 20px;
     position: relative;
     left: 100px;
-}
-
-.parallax {
-    background-image: url("../images/eyeballparallax.PNG");
-    height: 500px;
-    background-attachment: fixed;
-    background-position: right;
-    background-repeat: no-repeat;
-}
-
-@media only screen and (max-device-width: 1366px) {
-    background-attachment: scroll;
 }
