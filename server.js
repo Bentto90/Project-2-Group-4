@@ -4,7 +4,6 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers/api');
 const compression = require('compression');
-const fetch = require('node-fetch');
 const hbs = exphbs.create({ });
 
 const sequelize = require('./config/connection');
