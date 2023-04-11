@@ -1,68 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Reviews</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Reviews</title>
 </head>
+
 <body>
-    <h1 class="headers level-item has-text-centered has-text-danger is-size-1">Submit a Review</h1>
-
-    <article class="media reviewForm">
-  <figure class="media-left">
-    <p class="image is-128x128">
-      <img src="https://bulma.io/images/placeholders/128x128.png">
-    </p>
-  </figure>
-  <div class="media-content">
-    <div class="field">
-      <p class="control">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-        <textarea class="textarea" placeholder="Add a comment..."></textarea>
+  <h1 class="headers level-item has-text-centered has-text-danger is-size-1">Submit a Review</h1>
+  <p class="homebtn">
+    <a href="/" class="homebtn">Home page</a>
+  </p>
+  <article class="media reviewForm">
+    <figure class="media-left">
+      <p class="image is-128x128">
+        <img src="https://bulma.io/images/placeholders/128x128.png">
       </p>
-    </div>
-    <nav class="level">
-      <div class="level-left">
-        <div class="level-item">
-          <a class="button is-info is-danger">Submit</a>
+    </figure>
+    <div class="media-content">
+      <div class="field">
+        <p class="control">
+        <div class="axe-row">
+          <img class="axe axe1" data src="/images/axeWhite.svg" />
+          <img class="axe axe2" src="/images/axeWhite.svg" />
+          <img class="axe axe3" src="/images/axeWhite.svg" />
+          <img class="axe axe4" src="/images/axeWhite.svg" />
+          <img class="axe axe5" src="/images/axeWhite.svg" />
         </div>
-      </div>
-    </nav>
-  </div>
-</article>
 
-<br>
-
-<article class="media reviewForm">
-  <figure class="media-left">
-    <p class="image is-128x128">
-      <img src="https://bulma.io/images/placeholders/128x128.png">
-    </p>
-  </figure>
-  <div class="media-content">
-    <div class="field">
-      <p class="control">
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
         <textarea class="textarea" placeholder="Add a comment..."></textarea>
-      </p>
-    </div>
-    <nav class="level">
-      <div class="level-left">
-        <div class="level-item">
-          <a class="button is-info is-danger">Submit</a>
-        </div>
+        </p>
       </div>
-    </nav>
-  </div>
-</article>
+      <nav class="level">
+        <div class="level-left">
+          <div class="level-item">
+            <a class="button is-info is-danger">Submit</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </article>
+  <script>
+    let allAxe = document.querySelectorAll(".axe");
+    console.log(allAxe);
+    for (var i = 0; i < allAxe.length; i++) {
+      allAxe[i].addEventListener("click", (e) => {
+        let target = e.target.classList[1].replace("axe", "");
+        console.log("i clicked", target)
+        document.querySelector("#rating").value = target
 
+      })
+
+    }
+
+
+  </script>
 </body>
+
 </html>
