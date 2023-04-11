@@ -7,3 +7,4 @@ router.get('/', getMovieRank);
 
 module.export = router;
 
+// Path: controllers/movieRank.js

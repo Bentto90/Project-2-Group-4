@@ -5,7 +5,6 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers');
 const compression = require('compression');
 const fetch = require('node-fetch');
-const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
 const hbs = exphbs.create({ });
 
 const sequelize = require('./config/connection');
