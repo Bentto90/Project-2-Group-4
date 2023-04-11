@@ -1,3 +1,0 @@
---require should
--R spec
---timeout 10000
