@@ -1,4 +1,4 @@
-const search = require('../../models/searchModel.js');
+const search = require('../models/searchModels.js');
 
 module.exports = {
     getSearchDetail (req, res) {

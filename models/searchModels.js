@@ -1,5 +1,5 @@
 const axios = require('axios');
-const data = require('./data.json');
+const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
 
 class Search {
     constructor (searchQuery) {
@@ -7,7 +7,7 @@ class Search {
     }
     async getData() {
         try {
-            const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${data.key}&language=pl-PL&query=${this.query}&page=1`);
+            const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=pl-PL&query=${this.query}&page=1`);
 
             const resData = response.data.results;
 
