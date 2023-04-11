@@ -3,14 +3,15 @@
     src: url(PlayfairDisplaySC-Regular);
 }
 
-.mainContent {
+.hero {
     background-color: black;
 }
 
 body {
     background-color: black;
-    background-attachment: fixed;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
     background-image: url(../images/eyeballparallax.PNG);
 }
 
@@ -43,6 +44,7 @@ a:hover {
 .maintitle {
     color: red;
     font-size: xx-large;
+    font-family: 'Creepster', cursive;
 }
 
 .maintitle:hover {
@@ -111,8 +113,8 @@ a:hover {
 }
 
 .container{
-    height:80vh;
-    margin-top: 20vh;
+    height:10vh;
+    margin-top: 10vh;
     align-items: center;
 }
 
@@ -203,4 +205,42 @@ img {
 .reviewForm {
     position: relative;
     top: 30px;
+}
+
+form {
+    position: relative;
+    right: 250px;
+}
+
+label {
+    position: relative;
+    top: 10px;
+}
+
+.create {
+    position: relative;
+    left: 250px;
+    bottom: 330px;
+}
+
+.title {
+    color: red;
+    position: relative;
+    right: 250px;
+    top: 50px;
+    font-weight: bold;
+}
+
+.account {
+    color: red;
+    font-weight: bold;
+    font-size: 32px;
+    position: relative;
+    left: 250px;
+    bottom: 15px;
+}
+
+.axe{
+    width: 30px;
+    margin-right: 5px;
 }
