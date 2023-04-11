@@ -9,8 +9,9 @@
 
 body {
     background-color: black;
-    background-attachment: fixed;
-    background-position:center;
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: bottom;
     background-image: url(../images/eyeballparallax.PNG);
 }
 
@@ -43,6 +44,7 @@ a:hover {
 .maintitle {
     color: red;
     font-size: xx-large;
+    font-family: 'Creepster', cursive;
 }
 
 .maintitle:hover {
