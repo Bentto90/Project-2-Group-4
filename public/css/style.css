@@ -3,13 +3,19 @@
     src: url(PlayfairDisplaySC-Regular);
 }
 
+.mainContent {
+    background-color: black;
+}
+
 body {
     background-color: black;
+    background-attachment: fixed;
+    background-position:center;
+    background-image: url(../images/eyeballparallax.PNG);
 }
 
 h2 {
     position: relative;
-    font-family: 'Dignity';
     margin-top: 50px;
     margin-right: 105px;
 }
@@ -23,7 +29,7 @@ footer {
 
 a {
     text-decoration: none;
-    color: red;
+    color: red; 
 }
 
 a:hover {
@@ -32,7 +38,6 @@ a:hover {
 
 .maintitle {
     color: red;
-    font-family: 'Dignity';
     font-size: xx-large;
 }
 
@@ -65,6 +70,10 @@ a:hover {
 
 .input:hover {
     border: 2px solid red;
+}
+
+.headers {
+    font-family: 'Dignity';
 }
 
 .column {
