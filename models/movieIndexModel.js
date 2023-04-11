@@ -1,22 +1,5 @@
-const sequelize = require('../config/connection');
 const axios = require('axios');
 const data = require('../config/data');
-const { User} = require('../models');
-
-const userData = require('./userData.json');
-
-const seedDatabase = async () => {
-    await sequelize.sync({ force: true });
-
-    const users = await User.bulkCreate(userData, {
-        individualHooks: true,
-        returning: true,
-    });
-
-    process.exit(0);
-}
-
-seedDatabase();
 
 class Latest {
     constructor(releaseYear, releasedTillNow) {
@@ -34,5 +17,4 @@ class Latest {
 };
 
 module.exports = Latest;
-
 
