@@ -1,8 +1,17 @@
+@font-face {
+    font-family: 'Dignity';
+    src: url(PlayfairDisplaySC-Regular);
+}
+
 body {
     background-color: black;
 }
 
-header {
+h2 {
+    position: relative;
+    font-family: 'Dignity';
+    margin-top: 50px;
+    margin-right: 105px;
 }
 
 footer {
@@ -23,8 +32,8 @@ a:hover {
 
 .maintitle {
     color: red;
+    font-family: 'Dignity';
     font-size: xx-large;
-    text-transform: uppercase;
 }
 
 .maintitle:hover {
@@ -47,11 +56,86 @@ a:hover {
 }
 
 .input {
-    background-color: rgb(245, 50, 50);
     border-radius: 10px;
-    width: 1700px;
+    width: 1600px;
     height: 50px;
     margin-top: 20px;
     position: relative;
-    left: 100px;
+}
+
+.input:hover {
+    border: 2px solid red;
+}
+
+.column {
+    margin-top: 40px;
+}
+
+.subgenre {
+    position: relative;
+    left: 22px;
+    bottom: 15px;
+}
+
+.subgenre2 {
+    position: relative;
+    left: 5px;
+    bottom: 15px;
+}
+
+.subgenre3 {
+    position: relative;
+    left: 15px;
+    bottom: 15px;
+} 
+
+.subgenre4 {
+    position: relative;
+    left:  5px;
+    bottom: 15px;
+}
+
+.subImg {
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.subImg:hover {
+    transform: scale(1.1);
+    border: 2px solid red;
+}
+
+.container {
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    border-radius: 5px;
+}
+
+.leftText {
+    display: flex;
+    font-size: 20px;
+    padding-left: 150px; 
+    position: relative;
+    bottom: 100px;
+}
+
+.rightText {
+    display: flex;
+    position: relative;
+    font-size: 20px;
+    bottom: 30px;
+}
+
+.rightImg {
+    float: right;
+    position: relative;
+    bottom: 70px;
+}
+
+.reviewForm {
+    position: relative;
+    top: 30px;
 }

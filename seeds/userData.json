@@ -2,7 +2,8 @@
     {
         "name": "",
         "email": "",
-        "password": ""
+        "password": "",
+        "subscribed": true
 
     }
 ]
