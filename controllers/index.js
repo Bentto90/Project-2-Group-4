@@ -1,4 +1,4 @@
-const latest = require('../../models/movieIndex.js');
+const latest = require('../models/movieIndexModel.js');
 
 const movies = {};
 let dateObj = new Date();
