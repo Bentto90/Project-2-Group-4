@@ -1,4 +1,4 @@
-const rank = require('../../models/movieRankModel.js');
+const rank = require('../models/movieRankModel.js');
 
 
 module.exports = {

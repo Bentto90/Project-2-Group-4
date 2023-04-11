@@ -1,5 +1,5 @@
 const axios = require('axios');
-const data = require('./data.json');
+const data = require('../config/data');
 
 class Latest {
     constructor(releaseYear, releasedTillNow) {
@@ -17,3 +17,4 @@ class Latest {
 };
 
 module.exports = Latest;
+

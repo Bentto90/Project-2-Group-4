@@ -1,5 +1,5 @@
 const axios = require('axios');
-const data = require('./data.json');
+const data = require('../config/data');
 
 class Search {
     constructor (searchQuery) {
