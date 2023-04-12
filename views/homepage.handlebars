@@ -1,33 +1,44 @@
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 <section class="hero is-fullheight">
-
+<header class="himg">
+    <nav class="level hnav">
+        <button class="bulma-hamburger-mixin">
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+            <p class="level-item has-text-centered">
+                <a class="headers maintitle is-size-1">House of Horrors</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a href="about.handlebars" class="link is-info navitem">About</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a href="watchlist.handlebars" class="link is-info navitem">My Watchlist</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a href="reviews.handlebars" class="link is-info navitem">Submit Review</a>
+            </p>
+            <p class="level-item has-text-centered">
+                <a href="login.handlebars" class="link is-info navitem">Login</a>
+                <a class="js-modal-trigger navitem" data-target="modal-js-example"></a>
+            </p>
+        </nav>
+</header>
 <form action = "/search" method = "GET">
-    <div class="searchBar field has-addons">
+    <div class="field has-addons">
         <div class="control">
             <input class="input is-large is-dark" type="text" placeholder="Search all horror movies..." name="search">
         </div>
         <div class="control">
-            <button class="searchButton button is-medium is-danger">Search</button>
+            <button class="button is-large is-danger">Search</button>
         </div>
     </div>
         
 <div>
-    <h2 class="trendingtitle">Trending</h2>
-</div>
-<div>
-<h1>{{title}}</h1>
-{{#each movies}}
-  <div>
-    <h2>{{title}}</h2>
-    <img src="{{poster_path}}" alt="{{title}} poster">
-    <p>{{overview}}</p>
-    <a href="/movie/{{id}}">View details</a>
-  </div>
-{{/each}}
+    <h2 class="headers has-text-centered has-text-danger is-size-2">Subgenres</h2>
 </div>
 
-<div class="trending columns">
+<div class="columns">
   <div class="column">
     <p class="subgenre is-size-4 has-text-danger">Classics</p>
     <a href="#">
@@ -95,7 +106,7 @@
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
     </a>
         <a href="#">
-      <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png"> 
+      <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
     </a>
         <a href="#">
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
@@ -106,3 +117,17 @@
   </div>
 </div>
 
+<footer>
+    <div>
+        <p>
+            Website Created by
+            <a class="has-text-danger" href="https://github.com/daniferru">daniferru</a>, 
+            <a class="has-text-danger" href="https://github.com/Bentto90">Bentto90</a>, 
+            <a class="has-text-danger" href="https://github.com/AntonioRobledo">AntonioRobledo</a>, 
+            <a class="has-text-danger" href="https://github.com/Esfan7">Esfan7</a>, 
+            <a class="has-text-danger" href="https://github.com/BigNATE38">BigNATE38.</a>
+        </p>
+        <p>2023</p>
+    </div>
+</footer>
+</iframe>
