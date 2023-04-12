@@ -15,6 +15,17 @@
 <div>
     <h2 class="trendingtitle">Trending</h2>
 </div>
+<div>
+<h1>{{title}}</h1>
+{{#each movies}}
+  <div>
+    <h2>{{title}}</h2>
+    <img src="{{poster_path}}" alt="{{title}} poster">
+    <p>{{overview}}</p>
+    <a href="/movie/{{id}}">View details</a>
+  </div>
+{{/each}}
+</div>
 
 <div class="columns">
   <div class="column">
