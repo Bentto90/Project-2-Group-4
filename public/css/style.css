@@ -11,7 +11,9 @@ body {
 }
 
 .searchBar {
-    margin-left: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .searchButton {
@@ -304,3 +306,4 @@ label {
 {
     display: "none"
 }
+
