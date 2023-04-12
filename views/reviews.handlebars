@@ -11,12 +11,19 @@
 
 <body>
   <h1 class="titles">Submit a Review</h1>
+   <div class="reviewList">
+      {{#each allReviews}}
+        <div class="r{{this.id}}">
+          <h4>"{{this.content}}"</h4>
+
+          <div class="make{{this.rating}}"></div>
+
+        </div>
+      {{/each}}
+
+    </div>
+
   <article class="media reviewForm">
-    <figure class="media-left">
-      <p class="image is-128x128">
-        <img src="https://bulma.io/images/placeholders/128x128.png">
-      </p>
-    </figure>
     <div class="media-content">
       <div class="field">
         <p class="control">
@@ -37,14 +44,16 @@
     
 
 
-    let axeRowEl = document.querySelector("#axeRow")
 
     /*   <img class="axe axe1" src="/images/axeWhite.svg" />
           <img class="axe axe2" src="/images/axeWhite.svg" />
           <img class="axe axe3" src="/images/axeWhite.svg" />
           <img class="axe axe4" src="/images/axeWhite.svg" />
           <img class="axe axe5" src="/images/axeWhite.svg" />*/
-    function show(num = 0){
+          let axeRowEl = document.querySelector("#axeRow")
+    function show(num = 0, targetEl){
+      
+        
         axeRowEl.innerHTML = "";
        for(let i = 0 ; i < 5 ; i ++){
           let imgEl = document.createElement("img");
@@ -72,7 +81,39 @@
        }
     }
 
-    show();
+    show(0,"#axeRow");
+
+    function addStars(num,targetEl){
+      let targetList = document.querySelectorAll(targetEl);
+
+      for(let j = 0; j < targetList.length; j++){
+         for(let i = 0 ; i < 5 ; i ++){
+          let imgEl = document.createElement("img");
+          
+          if(i < num){
+            imgEl.setAttribute("src", "/images/axeRed.svg");
+          } else {
+            imgEl.setAttribute("src", "/images/axeWhite.svg");
+          }          
+          targetList[j].appendChild(imgEl);
+
+       }
+
+    }
+
+
+      }//end of function
+
+     
+
+    addStars(1,".make1");
+    addStars(2,".make2");
+    addStars(3,".make3");
+    addStars(4,".make4");
+    addStars(5,".make5");
+        
+
+
 
 
   </script>

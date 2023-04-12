@@ -1,9 +1,14 @@
 const router = require('express').Router();
+const movieController = require('./api/movieControllers');
 
-// renders homepage 
-router.get('/', async (req, res) => {
-    res.render('homepage');
-});
+// renders homepage
+// router.get('/', async (req, res) => {
+//     res.render('homepage');
+// });
+
+router.get('/', movieController.getTrendingMovies);
+router.get('/movie/:id', movieController.getMovieDetails);
+router.get('/search/', movieController.getSearchResults);
 
 // renders about page
 router.get('/about.handlebars', async (req, res) => {
