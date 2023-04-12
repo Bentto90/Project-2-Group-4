@@ -9,3 +9,10 @@ CREATE TABLE user (
     email VARCHAR(30) NOT NULL,
     password VARCHAR(30) NOT NULL
 );
+
+CREATE TABLE review(
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+  rating INT NOT NULL,
+  content VARCHAR(300) NOT NULL
+   
+)

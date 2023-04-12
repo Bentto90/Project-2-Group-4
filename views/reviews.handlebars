@@ -9,9 +9,6 @@
 
 <body>
   <h1 class="headers level-item has-text-centered has-text-danger is-size-1">Submit a Review</h1>
-  <p class="homebtn">
-    <a href="/" class="homebtn">Home page</a>
-  </p>
   <article class="media reviewForm">
     <figure class="media-left">
       <p class="image is-128x128">
@@ -21,38 +18,59 @@
     <div class="media-content">
       <div class="field">
         <p class="control">
-        <div class="axe-row">
-          <img class="axe axe1" data src="/images/axeWhite.svg" />
-          <img class="axe axe2" src="/images/axeWhite.svg" />
-          <img class="axe axe3" src="/images/axeWhite.svg" />
-          <img class="axe axe4" src="/images/axeWhite.svg" />
-          <img class="axe axe5" src="/images/axeWhite.svg" />
+        <div class="axe-row" id="axeRow">
+       
         </div>
-
-        <textarea class="textarea" placeholder="Add a comment..."></textarea>
+        <form method="post" action="/api/reviews">
+        <input type="hidden" id="rating" name="rating">
+        <textarea class="textarea" name="content"placeholder="Add a comment..."></textarea>
+        <input type="submit" class="button is-info is-danger mt-3" value="submit">
+        </form>
         </p>
       </div>
-      <nav class="level">
-        <div class="level-left">
-          <div class="level-item">
-            <a class="button is-info is-danger">Submit</a>
-          </div>
-        </div>
-      </nav>
+      
     </div>
   </article>
   <script>
-    let allAxe = document.querySelectorAll(".axe");
-    console.log(allAxe);
-    for (var i = 0; i < allAxe.length; i++) {
-      allAxe[i].addEventListener("click", (e) => {
-        let target = e.target.classList[1].replace("axe", "");
-        console.log("i clicked", target)
-        document.querySelector("#rating").value = target
+    
 
-      })
 
+    let axeRowEl = document.querySelector("#axeRow")
+
+    /*   <img class="axe axe1" src="/images/axeWhite.svg" />
+          <img class="axe axe2" src="/images/axeWhite.svg" />
+          <img class="axe axe3" src="/images/axeWhite.svg" />
+          <img class="axe axe4" src="/images/axeWhite.svg" />
+          <img class="axe axe5" src="/images/axeWhite.svg" />*/
+    function show(num = 0){
+        axeRowEl.innerHTML = "";
+       for(let i = 0 ; i < 5 ; i ++){
+          let imgEl = document.createElement("img");
+          imgEl.classList = "axe axe" + (i + 1);
+
+          if(i < num){
+            imgEl.setAttribute("src", "/images/axeRed.svg");
+          } else {
+            imgEl.setAttribute("src", "/images/axeWhite.svg");
+          }
+
+           imgEl.addEventListener("click", (e) => {
+              let target = e.target.classList[1].replace("axe", "");
+              console.log("i clicked", target)
+              //target represent number
+              show(target)
+              document.querySelector("#rating").value = target
+          
+            })
+
+       
+
+          axeRowEl.appendChild(imgEl);
+
+       }
     }
+
+    show();
 
 
   </script>
