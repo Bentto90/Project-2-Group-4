@@ -7,6 +7,8 @@ const movieController = require('./api/movieControllers');
 // });
 
 router.get('/', movieController.getTrendingMovies);
+router.get('/movie/:id', movieController.getMovieDetails);
+router.get('/search', movieController.getSearchResults);
 
 // renders about page
 router.get('/about.handlebars', async (req, res) => {
