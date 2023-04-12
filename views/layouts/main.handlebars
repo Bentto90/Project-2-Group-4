@@ -13,40 +13,40 @@
     <title>House of Horrors</title>
 </head>
 <body>
-    <header class="himg">
-        <div id="sidePanel" class="panel">
-            <a class="closebtn" onclick="closeNav()">×</a>
-            <ul>
-            <a href="#homepage.handlebars">Home</a>
-            <a href="#about.handlebars">About</a>
-            <a href="#watchlist.handlebars">My Watchlist</a>
-            <a href="#reviews.handlebars">Submit Review</a>
-            <a href="#login.handlebars">Login</a>
-            </ul>
-        </div> 
-    <nav class="level hnav">
-    <button class="openbtn" onclick="openNav()">☰</button>
-        <p class="level-item has-text-centered">
-            <a href="/" class="link is-info navitem">Home</a>
-        </p>
-        <p class="level-item has-text-centered">
-            <a href="/" class="maintitle">House of Horrors</a>
-        </p>
-        <p class="level-item has-text-centered">
-            <a href="about.handlebars" class="link is-info navitem">About</a>
-        </p>
-        <p class="level-item has-text-centered">
-            <a href="watchlist.handlebars" class="link is-info navitem">My Watchlist</a>
-        </p>
-        <p class="level-item has-text-centered">
-            <a href="reviews.handlebars" class="link is-info navitem">Submit Review</a>
-        </p>
-        <p class="level-item has-text-centered">
-            <a href="login.handlebars" class="js-modal-trigger navitem" data-target="modal-js-example">Login</a>
-        </p>
-    </nav>
-<main class="container container-fluid mt-5"></main>
-</header>
+     <header class="himg navstrip">
+                <div id="sidePanel" class="panel">
+                        <a class="closebtn" onclick="closeNav()">×</a>
+                        <ul>
+                        <a href="#about">About</a>
+                        <a href="#watchlist.handlebars">My Watchlist</a>
+                        <a href="#reviews.handlebars">Submit Review</a>
+                        <a href="#login.handlebars">Login</a>
+                        </ul>
+                </div>
+                    
+                    <nav class="level hnav">
+                    <button class="openbtn" onclick="openNav()">☰</button>
+                    <p class="level-item has-text-centered">
+                        <a href="/" class="link is-info navitem">Home</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a href="#homepage.handlebars" class="maintitle">House of Horrors</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a href="about.handlebars" class="link is-info navitem">About</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a href="watchlist.handlebars" class="link is-info navitem">My Watchlist</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a href="reviews" class="link is-info navitem">Submit Review</a>
+                    </p>
+                    <p class="level-item has-text-centered">
+                        <a href="login.handlebars" class="link is-info navitem">Login</a>
+                    </p>
+                </nav>
+            <main class="container container-fluid mt-5"></main>
+        </header>
        
 {{{body}}}
 
