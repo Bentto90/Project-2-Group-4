@@ -147,6 +147,20 @@ a:hover {
     margin: 10%;
 }
 
+.reviewtitle {
+    color: aliceblue;
+    font-family: 'Creepster', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
+.trendingtitle {
+    color: red;
+    font-family: 'Creepster', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+
 .input:hover {
     border: 2px solid red;
 }
