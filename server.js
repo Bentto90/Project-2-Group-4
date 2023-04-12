@@ -49,10 +49,10 @@ sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('http://localhost:' + PORT));
 });
 
-function openNav() {
-    document.getElementById("sidePanel").style.width = "250px";
-  }
+// function openNav() {
+//     document.getElementById("sidePanel").style.width = "250px";
+//   }
   
-  function closeNav() {
-    document.getElementById("sidePanel").style.width = "0";
-  };
+//   function closeNav() {
+//     document.getElementById("sidePanel").style.width = "0";
+//   };

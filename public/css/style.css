@@ -23,7 +23,7 @@ h2 {
     position: relative;
     margin-top: 50px;
     margin-right: 105px;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     top: 0;
     background-color: black;
@@ -116,11 +116,11 @@ a:hover {
     background-color:#444;
 }
 
-.container{
+/* .container{
     height:10vh;
     margin-top: 10vh;
     align-items: center;
-}
+} */
 
 .input {
     border-radius: 10px;
