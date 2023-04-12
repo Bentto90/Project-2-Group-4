@@ -15,6 +15,10 @@ body {
     background-image: url(../images/eyeballparallax.PNG);
 }
 
+.searchButton {
+    top: 10px;
+}
+
 h2 {
     position: relative;
     margin-top: 50px;
@@ -187,6 +191,14 @@ img {
     padding-left: 150px; 
     position: relative;
     bottom: 100px;
+    margin-left: 50px;
+    margin-right: 200px;
+}
+
+.leftImg {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .rightText {
@@ -194,12 +206,15 @@ img {
     position: relative;
     font-size: 20px;
     bottom: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .rightImg {
     float: right;
     position: relative;
     bottom: 70px;
+    right: 100px;
 }
 
 .reviewForm {
@@ -217,18 +232,22 @@ label {
     top: 10px;
 }
 
+.loginBox {
+    bottom: 565px;
+}
+
 .create {
     position: relative;
     left: 250px;
-    bottom: 330px;
+    bottom: 900px;
 }
 
 .title {
     color: red;
     position: relative;
     right: 250px;
-    top: 50px;
     font-weight: bold;
+    bottom: 510px;
 }
 
 .account {
@@ -237,7 +256,7 @@ label {
     font-size: 32px;
     position: relative;
     left: 250px;
-    bottom: 15px;
+    bottom: 580px;
 }
 
 .axe{
