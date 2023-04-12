@@ -5,7 +5,7 @@ const getTrendingMovies = async (req, res) => {
   try {
     const response = await axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`);
     const movies = response.data.results.slice(0, 20);
-    res.render('homepage', { title: 'Trending Movies', movies });
+    res.render('homepqage', { title: 'Trending Movies', movies });
   } catch (error) {
     console.error(error);
     res.render('error', { message: 'Something went wrong' });
