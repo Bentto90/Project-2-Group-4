@@ -248,10 +248,12 @@ img {
     position: relative;
     top: 30px;
 }
-
+.media{
+    padding: 20px;
+}
 form {
     position: relative;
-    right: 250px;
+
 }
 
 label {
@@ -296,4 +298,22 @@ label {
 .axe1
 {
     display: "none"
+}
+.reviewList{
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reviewList > div{
+
+    padding: 20px;
+    width: 32%;
+}
+.reviewList > div h4{
+    margin-bottom: 5px;
+}
+.make1 img,.make2 img,.make3 img,.make4 img,.make5 img{
+    width: 20px;
 }
