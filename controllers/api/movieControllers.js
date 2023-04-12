@@ -1,11 +1,21 @@
 const axios = require('axios');
 const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
 
+// const getTrendingMovies = async (req, res) => {
+//   try {
+//     const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27&sort_by=vote_average.desc`);
+//     const movies = response.data.results.slice(0, 20);
+//     res.render('homepqage', { title: 'Top Rated Horror Movies', movies });
+//   } catch (error) {
+//     console.error(error);
+//     res.render('error', { message: 'Something went wrong' });
+//   }
+// };
 const getTrendingMovies = async (req, res) => {
   try {
-    const response = await axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`);
+    const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27&sort_by=vote_average.desc`);
     const movies = response.data.results.slice(0, 20);
-    res.render('homepqage', { title: 'Trending Movies', movies });
+    res.render('homepage', { title: 'Trending Movies', movies });
   } catch (error) {
     console.error(error);
     res.render('error', { message: 'Something went wrong' });

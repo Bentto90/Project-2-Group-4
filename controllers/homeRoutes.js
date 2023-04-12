@@ -1,23 +1,12 @@
 const router = require('express').Router();
-// renders homepage 
+const movieController = require('./api/movieControllers');
+
+// renders homepage
 // router.get('/', async (req, res) => {
-//     try {
-//         const movies = await movies.findALL();
-//         res.render('homepage', { movies });
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-   
+//     res.render('homepage');
 // });
 
-router.get('/', async (req, res) => {
-    try {
-      const trendingMovies = await getTrendingMovies();
-      res.render('homepage', { title: 'Trending Movies', movies: trendingMovies });
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+router.get('/', movieController.getTrendingMovies);
 
 // renders about page
 router.get('/about.handlebars', async (req, res) => {
