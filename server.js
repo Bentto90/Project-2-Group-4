@@ -5,16 +5,12 @@ const exphbs = require('express-handlebars');
 const routes = require('./controllers/api');
 const compression = require('compression');
 const hbs = exphbs.create({ });
-
+const movieDetail = require('./controllers/movieDetail.js');
+const searchController = require('./controllers/search.js');
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-
-
-
-
 const Review = require("./models/Review");
-
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -47,16 +43,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
-
+app.use('/', movieDetail);
+app.use('/', searchController)
 app.use(routes);
   
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('http://localhost:' + PORT));
 });
 
-function openNav() {
-    document.getElementById("sidePanel").style.width = "250px";
-  }
+// function openNav() {
+//     document.getElementById("sidePanel").style.width = "250px";
+//   }
   
   function closeNav() {
     document.getElementById("sidePanel").style.width = "0";
@@ -97,8 +94,4 @@ function openNav() {
     } catch (e){
         console.log("error", e)
     }
-   
-
-
-
   })

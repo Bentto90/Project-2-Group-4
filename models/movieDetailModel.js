@@ -1,4 +1,5 @@
 const axios = require('axios');
+const router = require('express').Router();
 const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
 
 class movieDetail {
@@ -7,7 +8,7 @@ class movieDetail {
     }
     async getData() {
         try {
-            const response = await axios.get(`https://api.themoviedb.org/3/movie/${this.movieID}?api_key=${API_KEY}&language=pl-PL`);
+            const response = await axios.get(`https://api.themoviedb.org/3/movie/${this.movieID}?api_key=${API_KEY}&language=en-US`);
             
             this.title = response.data.title;
             this.description = response.data.overview;

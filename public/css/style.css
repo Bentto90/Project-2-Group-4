@@ -3,7 +3,7 @@
     src: url(PlayfairDisplaySC-Regular);
 }
 
-.mainContent {
+.hero {
     background-color: black;
 }
 
@@ -15,11 +15,15 @@ body {
     background-image: url(../images/eyeballparallax.PNG);
 }
 
+.searchButton {
+    top: 10px;
+}
+
 h2 {
     position: relative;
     margin-top: 50px;
     margin-right: 105px;
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     top: 0;
     background-color: black;
@@ -112,11 +116,11 @@ a:hover {
     background-color:#444;
 }
 
-.container{
+/* .container{
     height:10vh;
     margin-top: 10vh;
     align-items: center;
-}
+} */
 
 .input {
     border-radius: 10px;
@@ -187,6 +191,14 @@ img {
     padding-left: 150px; 
     position: relative;
     bottom: 100px;
+    margin-left: 50px;
+    margin-right: 200px;
+}
+
+.leftImg {
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .rightText {
@@ -194,18 +206,59 @@ img {
     position: relative;
     font-size: 20px;
     bottom: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .rightImg {
     float: right;
     position: relative;
     bottom: 70px;
+    right: 100px;
 }
 
 .reviewForm {
     position: relative;
     top: 30px;
 }
+
+form {
+    position: relative;
+    right: 250px;
+}
+
+label {
+    position: relative;
+    top: 10px;
+}
+
+.loginBox {
+    bottom: 565px;
+}
+
+.create {
+    position: relative;
+    left: 250px;
+    bottom: 900px;
+}
+
+.title {
+    color: red;
+    position: relative;
+    right: 250px;
+    font-weight: bold;
+    bottom: 510px;
+}
+
+.account {
+    color: red;
+    font-weight: bold;
+    font-size: 32px;
+    position: relative;
+    left: 250px;
+    bottom: 580px;
+}
+
 .axe{
     width: 30px;
     margin-right: 5px;

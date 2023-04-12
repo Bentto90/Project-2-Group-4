@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const latest = require('../models/index.js');
+const Latest = require('../models/index.js');
 
 const movies = {};
 let dateObj = new Date();
@@ -22,8 +22,8 @@ function getDay(date) {
 let releasedTillNow = 
     dateObj.getFullYear() + '-' + getMonth(dateObj) + '-' + getDay(dateObj);
 
-const latestMovies = async (req, res) => {
-    let search = new latest(releaseYear, releasedTillNow);
+const latestMovies = async () => {
+    let search = new Latest(releaseYear, releasedTillNow);
     try {
         await search.getDate();
         movies.result = search.result;

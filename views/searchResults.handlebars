@@ -1,0 +1,15 @@
+<head>
+        <title>Search Results</title>
+    </head>
+    <body>
+        <h1>Search Results</h1>
+        {{#if results.length}}
+            <ul>
+                {{#each results}}
+                    <li>{{this.title}}</li>
+                {{/each}}
+            </ul>
+        {{else}}
+            <p>No results found.</p>
+        {{/if}}
+    </body>

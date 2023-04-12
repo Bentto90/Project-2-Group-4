@@ -1,10 +1,16 @@
-const express = require('express');
-const router = express.Router();
+const router = require('express').Router();
+const Search = require('../models/searchModel.js');
 
-const { getSearchData } = require('../controllers/search.js');
+router.get('/search', async (req, res) => {
+    try {
+        const searchQuery = req.query.searchQuery;
+        const search = new Search(searchQuery);
+        await search.getData();
+        return res.render('searchResults', {searchQuery, searchResults: search.results});
+    } catch (err) {
+        console.log("Error: " + err);
+        return res.status(500).send("Error searching movies");
+    }
+});
 
-router.get('/', getSearchData);
-
-module.export = router;
-
-// Path: controllers/search.js
+module.exports = router;
