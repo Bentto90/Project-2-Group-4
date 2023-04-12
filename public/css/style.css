@@ -157,6 +157,12 @@ a:hover {
     text-align: center;
 }
 
+.trendingText {
+    font-family: 'Creepster', cursive;
+    font-size: 35px;
+    color: red;
+}
+
 .input:hover {
     border: 2px solid red;
 }
