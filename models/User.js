@@ -1,4 +1,4 @@
-const {model, DataTypes} = require('sequelize');
+const {Model, DataTypes} = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
@@ -18,7 +18,7 @@ User.init(
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
+        username: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -37,18 +37,14 @@ User.init(
                 len: [8],   // password must be at least 8 characters long
             },
         },
-        subscribtion: {
-            type: DataTypes.BOOLEAN,
-            allowNull: false,
-        }
     },
     {
         hooks: {
-            beforecreate: async (newUserData) => {
+            async beforeCreate(newUserData) {
                 newUserData.password = await bcrypt.hash(newUserData.password, 10);
                 return newUserData;
             },
-            beforeUpdate: async (updatedUserData) => {
+            async beforeUpdate(updatedUserData) {
                 updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
                 return updatedUserData;
             },
