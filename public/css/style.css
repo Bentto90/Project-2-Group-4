@@ -428,3 +428,19 @@ label {
 .make1 img,.make2 img,.make3 img,.make4 img,.make5 img {
     width: 20px;
 }
+.movieGrid{
+    display: flex;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+.movieGrid h4{
+    color:white;
+}
+.movieGrid > div{
+    width: 32%;
+
+}
+.movieGrid > div img{
+    max-width: 200px;
+}

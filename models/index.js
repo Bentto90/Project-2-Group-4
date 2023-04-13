@@ -17,5 +17,6 @@
 // seedDatabase();
 
 const User = require('./User');
+const Watchlist = require('./Watchlist');
 
-module.exports = { User }
+module.exports = { User, Watchlist }

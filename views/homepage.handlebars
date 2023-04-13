@@ -11,17 +11,24 @@
           {{#each movies}}
   <div class="columns level">
   <div class="column">
-    <h2 class="movieTitle">{{title}}</h2>
-    <img src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}} poster">
-    <p class="movieP">{{overview}}</p>
-    <a href="/movie/{{id}}">View details</a>
+    <h2 class="movieTitle">{{this.title}}</h2>
+    <img src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}" alt="{{this.title}} poster">
+    <p class="movieP">{{this.overview}}</p>
+    <a href="/movie/{{this.id}}">View details</a>
+
+     <form action="/api/watchlist" method="post">
+        <input type="hidden" name="user_id" value="{{user_id}}">
+        <input type="hidden" name="movie_title" value="{{this.title}}">
+        <input type="hidden" name="movie_id" value="{{this.id}}">
+        <input type="submit" value="Add to Watchlist">
+        </form>
   </div>
 
  <div class="columns">
   <div class="column">
     <p class="trendingText">Classics</p>
     <a href="#">
-      <img class='subImg' src="https://image.tmdb.org/t/p/w500/{{poster_path}}">
+      <img class='subImg' src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}">
     </a>
     <a href="#">
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">

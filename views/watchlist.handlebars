@@ -3,9 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>My Watchlist</title>
+
 </head>
 <body class="watch-backgrnd">
     <h1 class="titles">My Watchlist</h1>
+    <div class="movieGrid">
+    {{#each movies}}
+        <div class="movie{{this.id}}">
+        <h4> {{this.movie_title}}</h4>
+       
+       
+     
+    </div>
+ {{/each}}
+    </div>
 </body>
 </html>
 <script>
