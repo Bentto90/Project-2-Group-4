@@ -75,6 +75,8 @@ body {
     font-size: 20px;
     color: #818181;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
 
   #main {
@@ -84,7 +86,9 @@ body {
   
 
 .searchBar {
-    margin-left: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .searchButton {
@@ -122,7 +126,7 @@ a:hover {
 
 .maintitle {
     color: red;
-    font-size: xx-large;
+    font-size: 60px;
     font-family: 'Creepster', cursive;
 }
 
@@ -199,9 +203,11 @@ a:hover {
     margin-top: 20px;
     position: relative;
 }
+
 .navstrip {
     background-color: black;
 }
+
 .abouttitle {
     color: black;
     font-size: 50px;
@@ -216,11 +222,12 @@ a:hover {
 }
 
 .aboutContainer {
-    background-color: #111;
+    background-color: #818181;
     width: fit-content;
     padding: 50px;
     margin: 20px;
-    border: 15px solid black;
+    border: 15px solid #444;
+    border-style: outset;
 }
 
 .abouttext {
@@ -235,6 +242,7 @@ a:hover {
     font-family: 'Creepster', cursive;
     font-size: 50px;
     text-align: center;
+    text-shadow: 3px 3px black;
 }
 
 .trendingText {
@@ -347,9 +355,28 @@ label {
     top: 10px;
 }
 
+.login-backgrnd {
+    background-image: url(../images/vhswallpaper.PNG);
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.watch-backgrnd {
+    background-image: url(../images/pennyballoonbackgrnd.PNG);
+    background-position: center;
+    background-size: cover;
+}
+
+/* .review-back {
+    background-image: url(../images/pennyballoonbackgrnd.PNG);
+    background-position: center;
+    background-size: cover;
+} */
+
 .loginBox {
     position: relative;
     bottom: 80px;
+    right: 255px;
 }
 
 .create {
@@ -377,29 +404,27 @@ label {
     bottom: 85px;
 }
 
-.axe{
+.axe {
     width: 30px;
     margin-right: 5px;
 }
-.axe1
-{
+.axe1 {
     display: "none"
 }
-.reviewList{
+.reviewList {
     color: white;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.reviewList > div{
-
+.reviewList > div {
     padding: 20px;
     width: 32%;
 }
-.reviewList > div h4{
+.reviewList > div h4 {
     margin-bottom: 5px;
 }
-.make1 img,.make2 img,.make3 img,.make4 img,.make5 img{
+.make1 img,.make2 img,.make3 img,.make4 img,.make5 img {
     width: 20px;
 }
