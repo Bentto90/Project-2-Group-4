@@ -25,11 +25,11 @@ const getMovieDetails = async (req, res) => {
 };
 
 const getSearchResults = async (req, res) => {
-  const searchQuery = req.query.query;
+  const query = req.query.query;
   try {
-    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${searchQuery}&page=1`);
+    const response = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US&query=${query}&page=1&with_genres=27&sort_by=vote_average.desc`);
     const movies = response.data.results;
-    res.render('searchResult', { title: 'Search Results', movies });
+    res.render('searchResult', { title: 'Search Results', movies, query });
   } catch (error) {
     console.error(error);
     res.render('error', { message: 'Something went wrong' });
