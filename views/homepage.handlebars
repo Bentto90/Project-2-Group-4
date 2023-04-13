@@ -1,33 +1,11 @@
 <section class="hero is-fullheight">
-<header class="himg">
-    <nav class="level hnav">
-        <button class="bulma-hamburger-mixin">
-        <span></span>
-        <span></span>
-        <span></span>
-        </button>
-            <p class="level-item has-text-centered">
-                <a class="headers maintitle is-size-1">House of Horrors</a>
-            </p>
-            <p class="level-item has-text-centered">
-                <a href="about.handlebars" class="link is-info navitem">About</a>
-            </p>
-            <p class="level-item has-text-centered">
-                <a href="watchlist.handlebars" class="link is-info navitem">My Watchlist</a>
-            </p>
-            <p class="level-item has-text-centered">
-                <a href="reviews.handlebars" class="link is-info navitem">Submit Review</a>
-            </p>
-            <p class="level-item has-text-centered">
-                <a href="login.handlebars" class="link is-info navitem">Login</a>
-                <a class="js-modal-trigger navitem" data-target="modal-js-example"></a>
-            </p>
-        </nav>
-</header>
 <form action = "/search" method = "GET">
     <div class="field has-addons">
         <div class="control">
-            <input class="input is-large is-dark" type="text" placeholder="Search all horror movies..." name="search">
+            <input class="input is-large is-dark" type="text" placeholder="Search all horror movies...">
+        </div>
+        <div>
+        <h2 class="titles">Trending</h2>
         </div>
         <div class="control">
             <button class="button is-large is-danger">Search</button>
@@ -35,23 +13,20 @@
     </div>
         
 <div>
-    <h2 class="titles">Trending</h2>
-</div>
-<div>
-<h1>{{title}}</h1>
-{{#each movies}}
+    <h1>{{title}}</h1>
+          {{#each movies}}
   <div>
     <h2>{{title}}</h2>
-    <img src="{{poster_path}}" alt="{{title}} poster">
+    <img src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}} poster">
     <p>{{overview}}</p>
     <a href="/movie/{{id}}">View details</a>
   </div>
-{{/each}}
+          {{/each}}
 </div>
 
 <div class="columns">
   <div class="column">
-    <p class="subgenre is-size-4 has-text-danger">Classics</p>
+    <p class="trendingText">Classics</p>
     <a href="#">
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
     </a>
@@ -64,7 +39,7 @@
   </div>
 
   <div class="column">
-    <p class="subgenre is-size-4 has-text-danger">Slasher</p>
+    <p class="trendingText">Slasher</p>
     <a href="#">
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
     </a>
@@ -77,7 +52,7 @@
   </div>
 
   <div class="column">
-    <p class=" subgenre2 is-size-4 has-text-danger">Paranormal</p>
+    <p class="trendingText">Paranormal</p>
     <a href="#">
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
     </a>
@@ -90,7 +65,7 @@
   </div>
 
   <div class="column">
-    <p class="subgenre3 is-size-4 has-text-danger">J-Horror</p>
+    <p class="trendingText">J-Horror</p>
     <a href="#">
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
     </a>
@@ -103,7 +78,7 @@
   </div>
 
     <div class="column">
-    <p class="subgenre4 is-size-4 has-text-danger">Possession</p>
+    <p class="trendingText">Possession</p>
     <a href="#">
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
     </a>
@@ -127,18 +102,4 @@
     </a>
   </div>
 </div>
-
-<footer>
-    <div>
-        <p>
-            Website Created by
-            <a class="has-text-danger" href="https://github.com/daniferru">daniferru</a>, 
-            <a class="has-text-danger" href="https://github.com/Bentto90">Bentto90</a>, 
-            <a class="has-text-danger" href="https://github.com/AntonioRobledo">AntonioRobledo</a>, 
-            <a class="has-text-danger" href="https://github.com/Esfan7">Esfan7</a>, 
-            <a class="has-text-danger" href="https://github.com/BigNATE38">BigNATE38.</a>
-        </p>
-        <p>2023</p>
-    </div>
-</footer>
 </iframe>
