@@ -92,6 +92,12 @@ body {
     margin-left: 50px;
 }
 
+.burgerBtn {
+    position: fixed;
+    z-index: 10;
+    top: 20px;
+}
+
 .button {
     top: 20px;
 }
