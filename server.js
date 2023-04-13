@@ -43,9 +43,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 app.use(routes);
   
-sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('http://localhost:' + PORT));
-});
+app.listen(PORT, () =>
+  console.log(`App listening at http://localhost:${PORT} 🚀`)
+);
 
   app.get("/reviews", async (req, res)=>{
     try{
