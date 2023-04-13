@@ -2,10 +2,20 @@ const axios = require('axios');
 const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
 
 const getTrendingMovies = async (req, res) => {
+
+
+
+
   try {
     const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27&sort_by=vote_average.desc`);
     const movies = response.data.results.slice(0, 20);
-    res.render('homepage', { title: 'Top Rated Horror Movies', movies });
+    
+    res.render('homepage', {
+       title: 'Top Rated Horror Movies', movies,
+
+       user_id: req.session.user_id,
+      
+      });
   } catch (error) {
     console.error(error);
     res.render('error', { message: 'Something went wrong' });

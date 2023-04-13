@@ -9,7 +9,7 @@ const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
 const Review = require("./models/Review");
-
+const Watchlist = require("./models/Watchlist");
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -94,4 +94,27 @@ app.listen(PORT, () =>
     }
   })
 
+
+  app.post("/api/watchlist", async (req, res)=>{
+    //req.body.rating
+    //req.body.content
+    console.log("what did i get?",req.body)
+    try{
+        const result = await Watchlist.create({
+            user_id: parseInt(req.body.user_id),
+            movie_id: parseInt(req.body.movie_id),
+            movie_title: req.body.movie_title
+            
+        })
+
+        console.log("result", result)
+
+        /* res.json({
+            data: result
+        }) */
+        res.redirect("/watchlist.handlebars")
+    } catch (e){
+        console.log("error", e)
+    }
+  })
 
