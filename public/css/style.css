@@ -89,9 +89,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 
-.searchButton {
+.button {
     top: 20px;
 }
 
@@ -356,9 +357,10 @@ label {
 }
 
 .login-backgrnd {
-    background-image: url(../images/vhswallpaper.PNG);
-    background-position: center;
-    background-repeat: repeat;
+    background-image: url(../images/eyeballparallax.PNG);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
 }
 
 .watch-backgrnd {
@@ -379,10 +381,18 @@ label {
     right: 255px;
 }
 
+.loginButton {
+    top: 10px;
+}
+
 .create {
     position: relative;
     left: 250px;
-    bottom: 415px;
+    bottom: 410px;
+}
+
+.createButton {
+    top: 10px;
 }
 
 .title {

@@ -1,7 +1,7 @@
 <form action = "/search" method = "GET">
     <div class="field has-addons">
         <div class="control">
-            <input class="input is-large is-dark" type="text" name="query" placeholder="Search all horror movies...">
+            <input class="searchBar input is-large is-dark" type="text" name="query" placeholder="Search all horror movies...">
         </div>
         <div class="control">
             <button type="submit" class="button is-medium is-danger">Search</button>
@@ -11,10 +11,10 @@
           {{#each movies}}
   <div class="columns level">
   <div class="column">
-    <h2 class="movieTitle">{{title}}</h2>
+{{!--     <h2 class="movieTitle">{{title}}</h2>
     <img src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}} poster">
     <p class="movieP">{{overview}}</p>
-    <a href="/movie/{{id}}">View details</a>
+    <a href="/movie/{{id}}">View details</a> --}}
   </div>
 
  <div class="columns">
@@ -22,23 +22,10 @@
     <p class="trendingText">Classics</p>
     <a href="#">
       <img class='subImg' src="https://image.tmdb.org/t/p/w500/{{poster_path}}">
-    </a>
-    <a href="#">
-      <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
-    </a>
-    <a href="#">
-      <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
-    </a>
   </div>
 
   <div class="column">
     <p class="trendingText">Slasher</p>
-    <a href="#">
-      <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
-    </a>
-    <a href="#">
-      <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
-    </a>
     <a href="#">
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
     </a>
