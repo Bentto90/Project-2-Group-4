@@ -48,3 +48,8 @@ const loginFormHandler = async (event) => {
   document
     .querySelector('.signup-form')
     .addEventListener('submit', signupFormHandler);
+
+    //Both the loginFormHandler and signupFormHandler are taken almost verbatim from the lecture modules, mostly modules 14 and 16
+    // The querySelectors find specific classes within the login.handlebars
+    // The two functions take the information being implemented in the login forms and post them to the /api/user endpoints
+    // This login script is inserted into the login.handlebars in order for the user to interact with the forms
