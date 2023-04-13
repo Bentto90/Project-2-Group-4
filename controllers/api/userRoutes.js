@@ -1,20 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-// router.get("/", (req, res) => {
-//   // Access our User model and run .findAll() method
-//   // .findAll() queries all users from user table, equiv to SELECT*FROM users;
-//   // returns an array of data
-//   User.findAll({
-//     attributes: { exclude: ["password"] },
-//   })
-//     .then((dbUserData) => res.json(dbUserData))
-//     .catch((err) => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
-
 
 // CREATES a User
 router.post('/', async (req, res) => {
