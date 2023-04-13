@@ -1,4 +1,4 @@
-    <title>{{ title }}</title>
+    {{!-- <title>{{ title }}</title>
 </head>
 <body>
     <h1>{{ title }}</h1>
@@ -14,5 +14,26 @@
             <p>{{ overview }}</p>
         </div>
     {{/each}}
+</body> --}}
+
+<body>
+<form action = "/search" method = "GET">
+    <div class="field has-addons">
+        <div class="control">
+            <input class="searchBar input is-large is-dark" type="text" name="query" placeholder="Search all horror movies...">
+        </div>
+        <div class="control">
+            <button type="submit" class="button is-medium is-danger">Search</button>
+        </div>
+    </div>
+<h1 class="titles">{{title}}</h1>
+<div class="movie-container">
+  {{#each movies}}
+    <div class="movie-card">
+      <h2 class="movieTitle"><a href="/movie/{{this.id}}">{{this.title}}</a></h2>
+      <img src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}" alt="{{this.title}} poster">
+    </div>
+  {{/each}}
 </body>
+
 |
