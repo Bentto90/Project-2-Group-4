@@ -43,9 +43,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 app.use(routes);
   
-app.listen(PORT, () => 
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
-);
+
 
   app.get("/reviews", async (req, res)=>{
     try{
@@ -117,4 +115,9 @@ app.listen(PORT, () =>
         console.log("error", e)
     }
   })
+
+
+  app.listen(PORT, () => 
+  console.log(`App listening at http://localhost:${PORT} 🚀`)
+);
 
