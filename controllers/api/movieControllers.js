@@ -8,7 +8,7 @@ const getTrendingMovies = async (req, res) => {
 
   try {
     const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27&sort_by=vote_average.desc`);
-    const movies = response.data.results.slice(0, 20);
+    const movies = response.data.results.filter(movie => movie.poster_path !== null).slice(0, 20);
     
     res.render('homepage', {
        title: 'Top Rated Horror Movies', movies,
