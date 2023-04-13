@@ -24,7 +24,7 @@ router.get('/', withAuth, async (req, res) => {
 
         const users = userData.map((project) => project.get({ plain: true }));
         console.log("check this",users, req.session, req.session.user_id)
-        res.render('homepage2', {
+        res.render('homepage', {
             users,
             user_id: req.session.user_id,
             logged_in: req.session.logged_in,
