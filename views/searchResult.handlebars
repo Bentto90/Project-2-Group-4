@@ -7,6 +7,7 @@
             <h2>{{ title }}</h2>
             {{#if poster_path}}
                 <img src="https://image.tmdb.org/t/p/w500/{{ poster_path }}" alt="{{ title }} poster">
+                <a href="/movie/{{id}}">View details</a>
             {{else}}
                 <p>No poster available</p>
             {{/if}}
