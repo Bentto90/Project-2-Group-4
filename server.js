@@ -47,15 +47,6 @@ sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('http://localhost:' + PORT));
 });
 
-function openNav() {
-    document.getElementById("sidePanel").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("sidePanel").style.width = "0";
-  };
-
-
   app.get("/reviews", async (req, res)=>{
     try{
         const result = await Review.findAll() //need to get all reviews
