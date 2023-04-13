@@ -23,46 +23,46 @@ body {
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-  }
+}
   
-  .sidebar a {
+.sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
     display: block;
     transition: 0.3s;
-  }
+}
   
-  .sidebar a:hover {
+.sidebar a:hover {
     color: #f1f1f1;
-  }
+}
   
-  .sidebar .closebtn {
+.sidebar .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-  }
+}
   
-  .openbtn {
+.openbtn {
     font-size: 20px;
     cursor: pointer;
     background-color: #111;
     color: white;
     padding: 10px 15px;
     border: none;
-  }
+}
   
-  .openbtn:hover {
+.openbtn:hover {
     background-color: #444;
-  }
+}
 
-  .panelText {
+.panelText {
     color: #444;
     font-family: 'Creepster', cursive;
-  }
+}
   
 .movieTitle {
     color: #444;
@@ -79,19 +79,20 @@ body {
     flex-wrap: wrap;
 }
 
-  #main {
+#main {
     transition: margin-left .5s;
     padding: 16px;
-  }
+}
   
 
 .searchBar {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 50px;
 }
 
-.searchButton {
+.button {
     top: 20px;
 }
 
@@ -357,8 +358,9 @@ label {
 
 .login-backgrnd {
     background-image: url(../images/vhswallpaper.PNG);
-    background-position: center;
     background-repeat: repeat;
+    background-position: center
+
 }
 
 .watch-backgrnd {
@@ -379,10 +381,18 @@ label {
     right: 255px;
 }
 
+.loginButton {
+    top: 10px;
+}
+
 .create {
     position: relative;
     left: 250px;
-    bottom: 415px;
+    bottom: 410px;
+}
+
+.createButton {
+    top: 10px;
 }
 
 .title {
