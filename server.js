@@ -56,18 +56,29 @@ function openNav() {
   };
 
 
-  app.get("/reviews", (req, res)=>{
-    Review.findAll() //need to get all reviews
+  app.get("/reviews", async (req, res)=>{
+    try{
+        const result = await Review.findAll() //need to get all reviews
+      
+        let formatData = [];
 
+        //iterate through results to find the data
+        result.map(r=>{
+            //i addeed it to array
+            formatData.push(r.dataValues)
+        })
+    
+        console.log("check::",formatData);
 
-    res.render("reviews",{
-        allreviews: [
-            {
-                id: 1,
-                name: "somethign"
-            }
-        ]
-    })
+        res.render("reviews",{
+            allReviews: formatData
+        })
+
+    } catch (e){
+        console.log("Error", e)
+    }
+
+   
   })
 
   app.post("/api/reviews", async (req, res)=>{
@@ -86,8 +97,10 @@ function openNav() {
         /* res.json({
             data: result
         }) */
-        res.redirect("/reviews.handlebars")
+        res.redirect("/reviews")
     } catch (e){
         console.log("error", e)
     }
   })
+
+
