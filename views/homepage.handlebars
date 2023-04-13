@@ -1,6 +1,3 @@
-<section class="hero is-fullheight">
-<header class="himg">
-</header>
 <form action = "/search" method = "GET">
     <div class="field has-addons">
         <div class="control">
@@ -9,11 +6,10 @@
         <div class="control">
             <button type="submit" class="button is-medium is-danger">Search</button>
         </div>
-
     </div>
         <h1 class="titles">{{title}}</h1>
           {{#each movies}}
-<div class="columns">
+  <div class="columns level">
   <div class="column">
     <h2 class="movieTitle">{{title}}</h2>
     <img src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}} poster">
@@ -21,8 +17,7 @@
     <a href="/movie/{{id}}">View details</a>
   </div>
 
-
-<div class="columns">
+{{!-- <div class="columns">
   <div class="column">
     <p class="trendingText">Classics</p>
     <a href="#">
