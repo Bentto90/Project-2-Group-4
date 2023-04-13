@@ -12,11 +12,11 @@
         <div class="login column is-5-tablet is-4-desktop is-3-widescreen">
          <div class="title">Login</div>
             <div class="account">Create Account</div>
-          <form action="" class="loginBox box">
+          <form action="" class="loginBox box login-form">
             <div class="field">
               <label for="" class="label">Email</label>
               <div class="control has-icons-left">
-                <input type="email" placeholder="Email address" class="input" required>
+                <input type="email" placeholder="Email address" class="input" id="email-login" required>
                 <span class="icon is-small is-left">
                   <i class="fa fa-envelope"></i>
                 </span>
@@ -25,48 +25,48 @@
             <div class="field">
               <label for="" class="label">Password</label>
               <div class="control has-icons-left">
-                <input type="password" placeholder="Password" class="input" required>
+                <input type="password" placeholder="Password" class="input" id="password-login" required>
                 <span class="icon is-small is-left">
                   <i class="fa fa-lock"></i>
                 </span>
               </div>
             </div>
             <div class="field">
-              <button class="button is-danger">
+              <button class="button is-danger" type="submit">
                 Login
               </button>
             </div>
           </form>
-         <form action="" class="create box">
+          <form action="" class="create box signup-form">
             <div class="field">
-              <label for="" class="label">Email</label>
+              <label for="" class="label">Username</label>
               <div class="control has-icons-left">
-                <input type="email" placeholder="Email address" class="input" required>
+                <input type="text" placeholder="Username" class="input" id="username-signup" required>
                 <span class="icon is-small is-left">
                   <i class="fa fa-envelope"></i>
                 </span>
               </div>
             </div>
             <div class="field">
+              <label for="" class="label">Email</label>
+              <div class="control has-icons-left">
+                <input type="text" placeholder="Email" class="input" id="email-signup" required>
+                <span class="icon is-small is-left">
+                  <i class="fa fa-lock"></i>
+                </span>
+              </div>
+            </div>
+            <div class="field">
               <label for="" class="label">Password</label>
               <div class="control has-icons-left">
-                <input type="password" placeholder="Password" class="input" required>
+                <input type="password" placeholder="Password" class="input" id="password-signup" required>
                 <span class="icon is-small is-left">
                   <i class="fa fa-lock"></i>
                 </span>
               </div>
             </div>
             <div class="field">
-              <label for="" class="label">Confirm Password</label>
-              <div class="control has-icons-left">
-                <input type="password" placeholder="Password" class="input" required>
-                <span class="icon is-small is-left">
-                  <i class="fa fa-lock"></i>
-                </span>
-              </div>
-            </div>
-            <div class="field">
-              <button class="button is-danger">
+              <button class="button is-danger" type="submit">
                 Create Account
               </button>
             </div>
@@ -76,6 +76,6 @@
     </div>
   </div>
 </section>
-
+<script src="./js/login.js"></script>
  </body>
  </html>
