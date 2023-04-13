@@ -9,23 +9,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <script type="text/javascript" src="server.js"></script>
+    <script type="text/javascript" src="../../server.js"></script>
     <title>House of Horrors</title>
 </head>
 <body>
      <header class="himg navstrip">
-                <div id="sidePanel" class="panel">
+                <div id="sidePanel" class="sidebar">
                         <a class="closebtn" onclick="closeNav()">×</a>
-                        <ul>
-                        <a href="#about">About</a>
-                        <a href="#watchlist.handlebars">My Watchlist</a>
-                        <a href="#reviews.handlebars">Submit Review</a>
-                        <a href="#login.handlebars">Login</a>
+                        <ul class="panelText">
+                        <a href="#toprated">Top Rated</a>
+                        <a href="/">Scroll Up</a>
                         </ul>
                 </div>
                     
                     <nav class="level hnav">
+                    <div id="main">   
                     <button class="openbtn" onclick="openNav()">☰</button>
+                    </div>
+                        <script>
+                            function openNav() {
+                            document.getElementById("sidePanel").style.width = "250px";
+                            document.getElementById("main").style.marginLeft = "250px";
+                            console.log("the button does something.")
+                            }
+                            function closeNav() {
+                            document.getElementById("sidePanel").style.width = "0";
+                            document.getElementById("main").style.marginLeft = "0";
+                            };
+                        </script>
+
                     <p class="level-item has-text-centered">
                         <a href="/" class="link is-info navitem">Home</a>
                     </p>
