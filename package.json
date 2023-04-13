@@ -8,9 +8,7 @@
     "start": "node server.js",
     "seed": "node seeds/seed.js"
   },
-  "engines": {
-    "node": "0.10.48"
-  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
