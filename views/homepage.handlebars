@@ -15,6 +15,7 @@
     <img src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}" alt="{{this.title}} poster">
     <p class="movieP">{{this.overview}}</p>
     <a href="/movie/{{this.id}}">View details</a>
+          {{/each}}
 
      <form action="/api/watchlist" method="post">
         <input type="hidden" name="user_id" value="{{user_id}}">
