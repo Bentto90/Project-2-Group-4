@@ -213,9 +213,16 @@ a:hover {
 }
 
 .aboutbackgrnd {
-    background-image: url(../images/kniveswallpaperimg.PNG);
-    background-position: center;
-    background-size: cover;
+    background-image: url(../images/moviewallpaperhorror.PNG);
+    background-repeat: repeat;
+}
+
+.aboutContainer {
+    background-color: #111;
+    width: fit-content;
+    padding: 50px;
+    margin: 20px;
+    border: 15px solid black;
 }
 
 .abouttext {
