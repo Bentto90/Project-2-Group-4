@@ -272,6 +272,7 @@ label {
 .loginBox {
     position: relative;
     bottom: 80px;
+    right: 255px;
 }
 
 .create {
@@ -299,29 +300,27 @@ label {
     bottom: 85px;
 }
 
-.axe{
+.axe {
     width: 30px;
     margin-right: 5px;
 }
-.axe1
-{
+.axe1 {
     display: "none"
 }
-.reviewList{
+.reviewList {
     color: white;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.reviewList > div{
-
+.reviewList > div {
     padding: 20px;
     width: 32%;
 }
-.reviewList > div h4{
+.reviewList > div h4 {
     margin-bottom: 5px;
 }
-.make1 img,.make2 img,.make3 img,.make4 img,.make5 img{
+.make1 img,.make2 img,.make3 img,.make4 img,.make5 img {
     width: 20px;
 }
