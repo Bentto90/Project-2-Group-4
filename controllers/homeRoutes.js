@@ -1,31 +1,33 @@
 const router = require('express').Router();
-const movieController = require('./api/movieControllers');
+const movieController = require('./movieRoutes');
 const { User } = require('../models');
 const Watchlist = require("../models/Watchlist")
 
 const withAuth = require('../utils/auth');
-router.get('/', movieController.getTrendingMovies);
 router.get('/movie/:id', movieController.getMovieDetails);
 router.get('/search/', movieController.getSearchResults);
 const axios = require('axios');
 const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
 // checks if user is authorizes
 
-
 //nothing here
 router.get('/', withAuth, async (req, res) => {
 
     console.log("check this", req.session, req.session.user_id)
     try {
-        const userData = await User.findAll({
-            attributes: { exclude: ['password'] },
-            order: [['name', 'ASC']],
-        });
+        // const userData = await User.findAll({
+        //     attributes: { exclude: ['password'] },
+        //     order: [['name', 'ASC']],
+        // });
 
-        const users = userData.map((project) => project.get({ plain: true }));
-        console.log("check this",users, req.session, req.session.user_id)
+        // const users = userData.map((project) => project.get({ plain: true }));
+        // console.log("check this",users, req.session, req.session.user_id)
+
+        const response = await axios.get(`https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&with_genres=27&sort_by=vote_average.desc`);
+        const movies = response.data.results.filter(movie => movie.poster_path !== null).slice(0, 20);
+
         res.render('homepage', {
-            users,
+            title: 'Top Rated Horror Movies', movies,
             user_id: req.session.user_id,
             logged_in: req.session.logged_in,
         });
@@ -35,7 +37,7 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-router.get('./login', (req, res) => {
+router.get('/login', (req, res) => {
     if (req.session.logged_in) {
     
         res.redirect('/');
