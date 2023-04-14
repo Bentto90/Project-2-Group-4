@@ -2,13 +2,16 @@
 
 ## Technologies Used:
 
--Node.js
--Express
--MySQL
--Sequelize
--Bcrypt
--Bulma.io
--Handlebars
+* Node.js
+* Express
+* MySQL
+* Sequelize
+* Bcrypt
+* Bulma.io
+* Handlebars
+* Compressor
+* Axios
+
 
 ## Description
 
@@ -19,6 +22,7 @@ This gives horror movie fanatics an organized space to find new top rated films 
 
 No installation is required, navigate to the following link:
 
+https://dry-refuge-68933.herokuapp.com/
 
 ## Usage
 
@@ -27,16 +31,18 @@ Using the top navbar the user is able to route to the 'Login' page where they ca
 Using the 'Submit Review' option in the navbar allows user to leave comments regarding films, and leave a rating. 
 
 SCREENSHOT OF HOMEPAGE BELOW
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
+    `
+    ![screenshot](public/images/Screenshot%202023-04-13%20202106.png)
 ## Credits
 
-Nathaniel Vanderpoort 
-Daniella Ferrufino 
-Changhyun Cho 
-Antonio Robledo-Yasaga 
-Esfan Behbehani 
+* Nathaniel Vanderpoort 
+* Daniella Ferrufino 
+* Changhyun Cho 
+* Antonio Robledo-Yasaga 
+* Esfan Behbehani 
 
 Link to API used to populate horror movies:
+
+https://www.themoviedb.org/?language=en-US
+
+https://axios-http.com/docs/api_intro
