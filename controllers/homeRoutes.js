@@ -9,10 +9,8 @@ router.get('/movie/:id', movieController.getMovieDetails);
 router.get('/search/', movieController.getSearchResults);
 const axios = require('axios');
 const API_KEY = 'ecc5cf85b814d6c344fc7df8d9448690';
-// checks if user is authorizes
 
-
-//nothing here
+// checks if user is authorized
 router.get('/', withAuth, async (req, res) => {
 
     console.log("check this", req.session, req.session.user_id)
@@ -23,6 +21,7 @@ router.get('/', withAuth, async (req, res) => {
         });
 
         const users = userData.map((project) => project.get({ plain: true }));
+        
         console.log("check this",users, req.session, req.session.user_id)
         res.render('homepage', {
             users,
@@ -30,7 +29,6 @@ router.get('/', withAuth, async (req, res) => {
             logged_in: req.session.logged_in,
         });
     } catch (err) {
-        console.log(err)
         res.status(500).json(err);
     }
 });
@@ -84,10 +82,5 @@ router.get('/watchlist.handlebars', async (req, res) => {
         console.log(err)
         res.status(500).json(err);
     }
-
-
-
-
- 
 });
 module.exports = router;

@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS horrormovies_db;
 CREATE DATABASE horrormovies_db;
 
- USE horrormovies_db;
+/*  USE horrormovies_db;
 
   CREATE TABLE user (
      id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
@@ -21,4 +21,4 @@ CREATE DATABASE horrormovies_db;
     user_id INT NOT NULL,
     movie_id INT NOT NULL,
      movie_title VARCHAR(300) NOT NULL
- );
+ ); */

@@ -38,12 +38,10 @@ app.engine('.handlebars', hbs.engine);
 app.set('view engine', '.handlebars');
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 app.use(routes);
-  
-
 
   app.get("/reviews", async (req, res)=>{
     try{
@@ -116,8 +114,7 @@ app.use(routes);
     }
   })
 
-
-  app.listen(PORT, () => 
-  console.log(`App listening at http://localhost:${PORT} 🚀`)
-);
+  sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log('Now listening'));
+  });
 

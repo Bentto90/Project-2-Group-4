@@ -12,7 +12,7 @@
   <div class="columns level">
   <div class="column">
     <h2 class="movieTitle">{{this.title}}</h2>
-    <img src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}" alt="{{this.title}} poster">
+    <img class='moviePoster' src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}" alt="{{this.title}} poster">
     <p class="movieP">{{this.overview}}</p>
     <a href="/movie/{{this.id}}">View details</a>
           {{/each}}
@@ -26,7 +26,6 @@
   </div>
 
  <div class="columns">
-  <div class="column">
     <p class="trendingText">Classics</p> 
     <a href="#">
       <img class='subImg' src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}">
@@ -93,4 +92,4 @@
 </div>
       
 </div>
-  </div>
+
