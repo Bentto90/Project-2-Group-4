@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../public/css/style.css">
   <title>{{ movie.title }}</title>
+
 </head>
 <body>
-  <h1>{{ movie.title }}</h1>
+  <div>
   <img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="{{ movie.title }} poster">
   <p>{{ movie.overview }}</p>
   <p>Release date: {{ movie.release_date }}</p>
