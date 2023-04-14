@@ -71,6 +71,11 @@ body {
     text-align: center;
 }
 
+.moviePoster {
+    display: inline-block;
+    align-items: center;
+}
+
 .movieP {
     font-size: 20px;
     color: #818181;

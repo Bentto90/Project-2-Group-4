@@ -32,7 +32,6 @@ router.get('/', withAuth, async (req, res) => {
             logged_in: req.session.logged_in,
         });
     } catch (err) {
-        console.log(err)
         res.status(500).json(err);
     }
 });
@@ -86,10 +85,5 @@ router.get('/watchlist.handlebars', async (req, res) => {
         console.log(err)
         res.status(500).json(err);
     }
-
-
-
-
- 
 });
 module.exports = router;
