@@ -42,6 +42,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 app.use(routes);
+
   
 
 
