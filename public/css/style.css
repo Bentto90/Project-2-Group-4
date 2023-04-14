@@ -97,6 +97,12 @@ body {
     margin-left: 50px;
 }
 
+.burgerBtn {
+    position: fixed;
+    z-index: 10;
+    top: 20px;
+}
+
 .button {
     top: 20px;
 }
@@ -459,3 +465,31 @@ label {
 .movieGrid > div img{
     max-width: 200px;
 }
+
+/* Flexbox container for movie cards */
+.movie-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Individual movie card styles */
+  .movie-card {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  @media (max-width: 767px) {
+    .movie-card {
+      width: calc(50% - 10px);
+    }
+  }
+  @media (max-width: 479px) {
+    .movie-card {
+      width: 100%;
+    }
+  }

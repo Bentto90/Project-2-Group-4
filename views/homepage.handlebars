@@ -7,16 +7,25 @@
             <button type="submit" class="button is-medium is-danger">Search</button>
         </div>
     </div>
-        <h1 class="titles">{{title}}</h1>
+        {{!-- <h1 class="titles">{{title}}</h1>
           {{#each movies}}
   <div class="columns level">
   <div class="column">
     <h2 class="movieTitle">{{this.title}}</h2>
-    <img class='moviePoster' src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}" alt="{{this.title}} poster">
+    <img class='subImg' src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}" alt="{{this.title}} poster">
     <p class="movieP">{{this.overview}}</p>
     <a href="/movie/{{this.id}}">View details</a>
-          {{/each}}
+          {{/each}} --}}
 
+<h1 class="titles">{{title}}</h1>
+<div class="movie-container">
+  {{#each movies}}
+    <div class="movie-card">
+      <h2 class="movieTitle"><a href="/movie/{{this.id}}">{{this.title}}</a></h2>
+      <img src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}" alt="{{this.title}} poster">
+    </div>
+  {{/each}}
+</div>
      <form action="/api/watchlist" method="post">
         <input type="hidden" name="user_id" value="{{user_id}}">
         <input type="hidden" name="movie_title" value="{{this.title}}">
@@ -25,7 +34,8 @@
         </form>
   </div>
 
- <div class="columns">
+ {{!-- <div class="columns">
+  <div class="column">
     <p class="trendingText">Classics</p> 
     <a href="#">
       <img class='subImg' src="https://image.tmdb.org/t/p/w500/{{this.poster_path}}">
@@ -89,7 +99,7 @@
       <img class='subImg' src="https://bulma.io/images/placeholders/128x128.png">
     </a>
   </div>
-</div>
+</div> --}}
       
 </div>
 

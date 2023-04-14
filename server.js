@@ -43,6 +43,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(compression());
 app.use(routes);
 
+  
+
+
   app.get("/reviews", async (req, res)=>{
     try{
         const result = await Review.findAll() //need to get all reviews
@@ -114,7 +117,7 @@ app.use(routes);
     }
   })
 
+
   sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening'));
   });
-
